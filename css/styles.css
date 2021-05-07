@@ -9652,12 +9652,13 @@ body input:required:valid, body textarea:required:valid {
   border: 1px solid #292d30;
 }
 
-.gloans-adv__left-elem .br {
+.gloans-adv__left-elem strong.br {
   display: block;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 767px) {
-  .gloans-adv__left-elem .br {
+  .gloans-adv__left-elem strong.br {
     display: inline-block;
   }
 }

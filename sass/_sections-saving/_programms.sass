@@ -1,0 +1,141 @@
+.saving-programms
+
+	.program
+		margin-bottom: 60px
+		padding: 41px 80px 80px 80px
+		border-width: 2px
+		border-style: solid
+		&:last-child
+			margin-bottom: 0
+		@include max-screen($md)
+			margin-bottom: 30px
+			padding: 40px 25px 30px
+		&-1
+			border-color: #e4596c
+			.program__img
+				&::before
+					background: #e4596c
+		&-2
+			border-color: #0fa696
+			.program__img
+				&::before
+					background: #0fa696
+		&-3
+			border-color: #c1d8e2
+			.program__img
+				&::before
+					background: #c1d8e2
+
+		&__tr
+			font-size: 17px
+			@include max-screen($md)
+				font-size: 15px
+
+		&__btn
+			@include max-screen($md)
+				margin-top: 15px
+
+.program
+
+	&__row
+		@include max-screen($xl)
+			display: block
+
+	&__col
+		width: 52%
+		@include max-screen($xl)
+			width: 100%
+
+	&__side
+		flex: 1 0 0
+		max-width: 100%
+		padding-top: 40px
+		@include max-screen($xl)
+			padding-top: 0
+
+		&-block
+			max-width: 374px
+			margin: 0 auto
+			@include max-screen($xl)
+				max-width: none
+				text-align: center
+
+		.button
+			width: 100%
+			max-width: 296px
+
+	&__img
+		margin-top: 64px
+		margin-bottom: 100px
+		position: relative
+		height: 270px
+		display: flex
+		align-items: center
+		left: 1em
+		font-size: 10px
+		z-index: 1
+		&::before
+			content: ''
+			display: block
+			font-size: 1em
+			width: 28.5em
+			height: 28.5em
+			border-radius: 50%
+			position: absolute
+			z-index: -1
+			left: 2em
+			top: 50%
+			margin-top: -14.25em
+		&::after
+			content: ''
+			display: block
+			font-size: 1em
+			width: 12.6em
+			height: 2.7em
+			position: absolute
+			z-index: 1
+			left: 50%
+			margin-left: 1em
+			top: 48%
+			background: url('../img/el-dots.svg') no-repeat 50% 50% / contain
+		.img
+			max-width: 250px
+			max-height: 100%
+		@include max-screen($xl)
+			height: auto
+			margin: 30px 0 50px
+			display: inline-block
+			left: -2em
+			&::after
+				left: 80%
+		@include max-screen($md)
+			font-size: 7px
+			.img
+				max-width: 160px
+
+
+	&__main
+		flex: 1 0 0
+		max-width: 100%
+
+
+
+
+
+// el-dots
+
+
+
+
+
+
+
+
+// @include max-screen($xl)
+
+// @include min-screen(1200px)
+
+
+
+
+
