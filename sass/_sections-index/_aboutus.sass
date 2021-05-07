@@ -1,0 +1,68 @@
+.aboutus
+	padding-top: 50px
+	@include max-screen($sm)
+		padding-top: 100px
+	.container
+		@include max-screen($md)
+			padding: 0
+	h2
+		text-align: center
+	&__row
+		display: flex
+		margin-bottom: 35px
+		@include max-screen($lg)
+			flex-direction: column
+			margin-bottom: 0
+	.fz-26
+		@include max-screen($md)
+			font-size: 20px
+	&__left
+		flex: 0 1 49%
+		margin-right: 2%
+		color: $white
+		@include max-screen($lg)
+			flex: 0 1 100%
+			margin-right: 0
+			margin-bottom: 70px
+	&__left-block
+		background-color: $bg-dark
+		padding: 50px 90px 54px 63px
+		height: 100%
+		position: relative
+		@include max-screen($md)
+			padding: 30px 30px 54px 30px
+		@include max-screen($sm)
+			padding: 20px 20px 120px 20px
+		&::before
+			content: ''
+			position: absolute
+			left: 63px
+			bottom: -85px
+			background-image: url('../img/about-img.png')
+			background-repeat: no-repeat
+			background-position: left bottom
+			width: 207px
+			height: 130px
+			@include max-screen($sm)
+				bottom: -50px
+				left: 20px
+	&__right
+		flex: 0 1 49%
+		@include max-screen($lg)
+			flex: 0 1 100%
+	&__right-block
+		background-color: $white
+		padding: 50px 90px 54px 63px
+		border-radius: 3px
+		box-shadow: 0 0 62px 0 rgba(0, 0, 0, 0.13)
+		height: 100%
+		@include max-screen($lg)
+			box-shadow: none
+		@include max-screen($md)
+			padding: 30px
+		@include max-screen($sm)
+			padding: 20px 20px 20px 20px
+	&__btns
+		display: flex
+		justify-content: center
+		align-items: center

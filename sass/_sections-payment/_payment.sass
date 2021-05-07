@@ -1,0 +1,124 @@
+.payment
+	@include max-screen($md)
+		margin-bottom: 0
+
+
+	&__body
+		margin-top: 96px
+		padding: 90px 0
+		background: $bg url('../img/bg-payment.jpg') no-repeat 50% 100%
+		position: relative
+		@include max-screen($lg)
+			width: calc(100% + 40px)
+			margin-left: -20px
+			padding-left: 20px
+			padding-right: 20px
+		@include max-screen($md)
+			margin-top: 35px
+			padding-top: 25px
+			padding-bottom: 145px
+
+	&__center
+		max-width: 754px
+		margin: 0 auto
+
+	&__tabs
+		position: absolute
+		top: 0
+		transform: translateY(-50%)
+		@include max-screen($md)
+			transform: none
+			position: static
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-bottom: 40px
+			padding: 20px !important
+
+	&__val
+		text-align: center
+		@include max-screen($md)
+			.fz-30
+				margin-bottom: 15px
+				font-size: 26px
+                     
+	&__form, &__requisites
+		margin-top: 40px
+		padding: 50px 0 60px
+		background: $white
+		border-radius: 3px
+		@include max-screen($md)
+			padding: 35px 25px 45px
+			margin-top: 30px
+	
+	&__form
+		&-2
+			display: none
+		&-inputs
+			max-width: 364px
+			margin: 0 auto
+		.input
+			background: $bg
+
+
+	&__requisites
+		.table
+			max-width: 470px
+			margin: 0 auto
+			font-size: 14px
+			th, td
+				padding-top: 6px
+				padding-bottom: 6px
+				vertical-align: top
+			th
+				width: 54%
+				font-weight: 600
+				padding-right: 25px
+			a
+				color: $accent
+		@include max-screen($md)
+			table, tbody, tr, th, td
+				display: block
+			.table
+				font-size: 15px
+				tr
+					margin-bottom: 10px
+					&:last-child
+						margin-bottom: 0
+
+				th, td
+					padding: 0
+				th
+					width: 100%
+					padding-right: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @include max-screen($xl)
+
+// @include min-screen(1200px)
+
+
+
+
+

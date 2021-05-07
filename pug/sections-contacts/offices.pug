@@ -1,0 +1,183 @@
+// offices
+section.section.offices.js-tab-wrapper
+
+	.container
+
+		.offices__head.flex
+
+			h2.title-2 Наши офисы
+
+			.tabs
+				button.button.tab.js-tab.is-active(type="button") Москва
+				button.button.tab.js-tab(type="button") Санкт-Петербург
+
+		// /.offices__head.
+
+		.addresses
+
+			.address.js-tab-item
+
+				.f-row.d-block-xl
+					.f-col.col-1-2
+						.address-map
+							.map#map1
+					.f-col.col-1-2
+						.address-info
+							.address-txt 
+								address Ленинский проспект, 15 «А», БЦ «Central Park Tower», 21 этаж
+								.metro
+									.metro__ic
+										img.img(src="img/metro.png", alt="alt")
+									span Шаболовская
+							.worktime Пн — Пт с 9:00 до 20:00
+						// /.address-info
+						.address-img
+							img.img.img--cover(src="img/address-img.jpg", alt="alt")
+			// /.address
+
+			.address.js-tab-item
+
+				.f-row.d-block-xl
+					.f-col.col-1-2
+						.address-map
+							.map#map2
+					.f-col.col-1-2
+						.address-info
+							.address-txt 
+								address Ленинский проспект, 15 «А», БЦ «Central Park Tower», 21 этаж
+								.metro
+									.metro__ic
+										img.img(src="img/metro.png", alt="alt")
+									span Шаболовская
+							.worktime Пн — Пт с 9:00 до 20:00
+						// /.address-info
+						.address-img
+							img.img.img--cover(src="img/address-img.jpg", alt="alt")
+			// /.address
+
+		// /.addresses
+
+		.contacts-data
+
+			.f-row.d-block-xl
+
+				.f-col.col-1-2.contacts-data__col
+					.contacts-item.contacts-form
+						h2.title-2 Напишите нам с сайта
+
+						form(action="#")
+							.form-row.flex
+								.form-col
+									input.input(type="text", name="name", placeholder="Как вас зовут?")
+								.form-col
+									input.input(type="text", name="contact", placeholder="Телефон или почта", required)
+							textarea.input.textarea(name="message", placeholder="Сообщение")
+							.form-footer.flex
+								button.button.button--accent-bg.submit(type="submit") Отправить
+								+checkbox('Даю свое согласие на обработку персональных&nbsp;данных')
+				
+					// /.contacts-form
+
+				// /.f-col.col-1-2
+
+				.f-col.col-1-2.contacts-data__col
+					.contacts-item
+						h2.title-2 Регистрационная информация
+						.contacts-item__txt.contacts-item__txt--lh
+							p Полное наименование —  Кредитный потребительский кооператив «Сберегательный Дом»
+							p Основной государственный регистрационный номер (ОГРН) — 
+								span.fw-600 1207800060808
+							p Идентификационный номер налогоплательщика (ИНН) — 
+								span.fw-600 7842181135
+							p Код причины постановки на учет (КПП) — 
+								span.fw-600 784201001
+							p Юридический адрес: 191036, город Санкт-Петербург, улица Жуковского, дом 63 литер а, этаж/офис 1/104
+							p E-mail: 
+								a(href="mailto:info@sber-dom24.ru") info@sber-dom24.ru
+
+					// /.contacts-form
+
+				// /.f-col.col-1-2
+
+				.f-col.col-1-2.contacts-data__col
+					.contacts-item
+						h2.title-2 Обращение в&nbsp;Банк России
+						.contacts-item__txt
+							p.fw-600 Центральный банк Российской Федерации
+							br
+							p.fw-600 Почтовый адрес для письменных обращений:
+							p 107016, Москва, ул. Неглинная, д. 12, Банк России
+							p.fw-600 Факс:
+							p.fw-600 +7 495 621-64-65, +7 495 621-62-88 
+							p.fw-600 Проверка прохождения факса: +7 495 771-48-30
+							br
+							p.fw-600 Пункт приема корреспонденции:
+							p Москва, Сандуновский пер., д. 3, стр. 1
+							p
+								span.fw-600 Часы работы 
+								| (кроме нерабочих праздничных дней): понедельник – четверг с&nbsp;9:00 до 17:30, пятница с 9:00 до 16:15, перерыв с 12:00 до 13:00
+							br
+							p.fw-600 Написать обращение с сайта:
+							a(href="https://cbr.ru/contacts/", target="_blank") https://cbr.ru/contacts/
+
+					// /.contacts-form
+
+				// /.f-col.col-1-2
+
+				.f-col.col-1-2.contacts-data__col
+					.contacts-item
+						h2.title-2 Обращение финуполномоченному
+						.contacts-item__txt
+							p.fw-600 РОСФИНМОНИТОРИНГ
+							br
+							p
+								span.fw-600 Почтовый адрес: 
+								| 107450, Москва, К-450, ул. Мясницкая, дом 39, строение 1 (вход осуществляется от станции метро "Тургеневская" или "Чистые пруды" со стороны пр-та Академика Сахарова).
+							br
+							p Направление обращений граждан и организаций в электронном виде в соответствии с Федеральным законом от 2 мая 2006 года № 59-ФЗ" О порядке рассмотрения обращений граждан Российской Федерации" по форме: 
+								a(href="http://www.fedsfm.ru/citizen/order", target="_blank") http://www.fedsfm.ru/citizen/order
+							br
+							p Прием корреспонденции производится в рабочие дни с 10.00 до 12.00 и с 14.00 до 16.00.
+
+					// /.contacts-form
+
+				// /.f-col.col-1-2
+
+				.f-col.col-1-2.contacts-data__col
+					.contacts-item
+						h2.title-2 Обращение в СРО
+						.contacts-item__txt
+							p.fw-600 СРО НСКК «Содействие»
+							p Ассоциация «Саморегулируемая организация "Национальное содружество кредитных кооперативов «Содействие»
+							br
+							p.fw-600 Почтовый адрес:
+							p 214000, г. Смоленск, ул. Октябрьской рев., д.9, офис 301
+							br
+							p.fw-600 Телефоны:
+							p (4812) 68-35-38, (4812) 38-52-92
+							br
+							p
+								span.fw-600 E-mail: 
+								a(href="okk@smolfinance.ru", target="_blank") okk@smolfinance.ru
+
+					// /.contacts-form
+
+				// /.f-col.col-1-2
+
+
+
+
+
+
+
+			// /.f-row
+
+
+
+
+		// /.contacts-data
+
+
+	// /.container
+
+// /.offices

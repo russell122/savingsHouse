@@ -1,0 +1,25 @@
+// page-form
+section.section.page-form
+
+	.container
+
+		.page-form__row.flex
+
+			.page-form__col
+
+				h2.title-2.el-border Получайте проценты с&nbsp;первого дня
+				p Оставьте телефон и получите индивидуальные условия для сбережения ваших средств! Работаем по всей России.
+
+			.page-form__inputs
+				input.input.js-tel-mask(type="tel", name="name", placeholder="Ваш телефон*", required)
+				button.button.button--accent-bg.submit(type="submit") Начать получать доход
+				+checkbox('Даю свое согласие на обработку персональных&nbsp;данных')
+
+			.page-form__img
+				img.img(src="img/girl.png", alt="alt")
+
+		// /.page-form__row.flex
+
+	// /.container
+
+// /.page-form

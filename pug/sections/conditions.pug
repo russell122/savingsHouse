@@ -1,0 +1,99 @@
+mixin program-table(val1, val2, val3, val4, val5, val6, val7)
+
+	.program__table
+		.program__tr.program__sum
+			.program__label Сумма сбережений:
+			.program__val
+				span !{val1}
+
+		.program__tr
+			.program__label Сроки инвестирования:
+			.program__val !{val2}
+
+		.program__tr
+			.program__label Процентная ставка:
+			.program__val
+				span !{val3} 
+				| годовых
+
+		.program__tr
+			.program__label Зачисление процентов:
+			.program__val !{val4}
+
+		.program__tr
+			.program__label Обеспечение:
+			.program__val !{val5}
+			
+		.program__tr
+			.program__label Досрочное расторжение:
+			.program__val !{val6}
+
+		.program__tr
+			.program__label Необходимые документы:
+			.program__val !{val7}
+
+		- for(let i = 0; i < 3; i++)
+			.program__tr
+				.program__label Получение денежных средств:
+				.program__val Наличными в офисе, Переводом на любую карту, Зачислением на счёт сбережения
+
+	// /.program__table
+
+
+
+
+
+
+
+
+// conditions
+.modal.conditions.js-tab-wrapper#conditions
+
+	button.modal__close(type="button", data-fancybox-close)
+
+
+	.conditions__head
+		h2.title-2 Полные условия программ
+
+		.conditions__tabs.tabs
+			button.button.tab.js-tab.is-active(type="button") Сберегательная
+			button.button.tab.js-tab(type="button") Пенсионная
+			button.button.tab.js-tab(type="button") Инвестиционная
+
+	// /.conditions__head
+
+	.conditions-items(data-simplebar, data-simplebar-auto-hide="false")
+
+		.conditions-item.js-tab-item
+			+program-table('От 5 000 Р до 1 400 000 Р', '1 год', '6%', 'Ежемесячно', 'Страхование', 'Есть, без потери процентов', 'Паспорт')
+
+		.conditions-item.js-tab-item
+			+program-table('От 5 000 Р до 1 400 000 Р', '2 года', '7%', '1 раз в 3 месяца', 'Страхование', 'Есть, без потери процентов', 'Паспорт, пенсионное удостоверение')
+
+		.conditions-item.js-tab-item
+			+program-table('От 1 450 000 Р', '3 года', '8,5%', '1 раз в 3 месяца', 'Залог недвижимости', 'Есть, без потери процентов', 'Паспорт')
+
+	// /.conditions-items
+
+
+	.conditions-form
+		.page-form__img
+			img.img(src="img/girl.png", alt="alt")
+		h2.title-2.conditions-form__title Остались вопросы?
+		p Оставьте телефон и мы перезвоним вам и всё подробно расскажем!
+		form(action="#")
+			.conditions-form__width
+				input.input.js-tel-mask(type="tel", name="name", placeholder="Ваш телефон*", required)
+				button.button.button--accent-bg.submit(type="submit") Отправить заявку
+			+checkbox('Даю свое согласие на обработку персональных&nbsp;данных')
+
+	// /.conditions-form
+
+	.subtext
+		p Сбережения принимаются по договору «о передаче личных сбережений» в соответствии с Федеральным Законом «О кредитной кооперации» № 190-Ф3 от 18.07.2009 г.
+		p Ответственность застрахована в НКО «Межрегиональное Потребительское Общество Взаимного Страхования» в соответствии с Федеральным Законом «О взаимном страховании» (ч. 2 ст. 1) № 286-ФЗ от 29.11.2007 г.
+		p Сохранность сбережений обеспечена резервным фондом КПК «Сберегательный Дом» и страховым компенсационным фондом СРО «Содействие» (регистрационный номер в Реестре 613 от 20.07.2020г.)
+
+
+
+// /.conditions

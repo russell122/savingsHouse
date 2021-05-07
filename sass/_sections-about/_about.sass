@@ -1,0 +1,486 @@
+
+.about
+	&__block
+		background-image: url('../img/about-bg.jpg')
+		background-repeat: no-repeat
+		background-position: center
+		height: 597px
+		width: 100%
+		position: relative
+		z-index: 2
+		display: flex
+		justify-content: center
+		align-items: center
+		@include max-screen($md)
+			align-items: center
+			justify-content: center
+		@include max-screen($sm)
+			height: 400px
+		&::before
+			content: ''
+			position: absolute
+			z-index: 1
+			width: 100%
+			height: 100%
+			background-color: rgba(82, 86, 104, 0.5)
+	.title-1
+		position: relative
+		z-index: 2
+		color: $white
+		text-align: center
+	.container
+		@include max-screen($md)
+			padding: 0
+	&__bottom
+		display: flex
+		justify-content: space-between
+		@include max-screen($lg)
+			flex-direction: column
+			align-items: center
+	&__left-elem
+		position: relative
+		z-index: 5
+		top: -90px
+		border-radius: 3px
+		box-shadow: 0 0 62px 0 rgba(0, 0, 0, 0.13)
+		background-color: #ffffff
+		padding: 55px 72px 85px 63px
+		width: 535px
+		@include max-screen($xl)
+			padding: 40px 50px 40px 50px
+			width: 450px
+		@include max-screen($lg)
+			top: 0
+			margin-top: 30px
+			width: 500px
+		@include max-screen($md)
+			width: 100%
+			display: flex
+			flex-direction: column
+			justify-content: center
+			align-items: center
+		@include max-screen($sm)
+			padding: 30px 20px
+	&__left
+		flex: 0 1 48%
+		display: flex
+		justify-content: flex-end
+		margin-right: 4%
+		@include max-screen($lg)
+			flex: 0 1 100%
+			margin-right: 0
+		img
+			margin-bottom: 25px
+		.el-border
+			padding-bottom: 50px
+			@include max-screen($sm)
+				padding-bottom: 20px
+			&::after
+				@include max-screen($md)
+					left: 50%
+					transform: translate(-50%, 0%)
+	&__right
+		flex: 0 1 48%
+		padding-top: 50px
+		display: flex
+		justify-content: flex-end
+		align-items: center
+		flex-direction: column
+		position: relative
+		bottom: 100px
+		@include max-screen($lg)
+			bottom: 0
+			flex: 0 1 100%
+	&__left-img
+		position: absolute
+		bottom: 0
+		right: 70px
+		@include max-screen($md)
+			position: relative
+			right: 0
+	&__right-elem
+		// width: 276px
+		// height: 250px
+		font-size: 10px
+		width: 27.6em
+		height: 25em
+		position: relative
+		overflow: hidden
+		border-bottom: 2px solid $accent
+		margin-bottom: 30px
+		@include max-screen($sm)
+			font-size: 8px
+		&::before
+			content: ''
+			position: absolute
+			top: 35px
+			left: 0
+			width: 27.6em
+			height: 27.6em
+			background-color: $bg
+			border-radius: 50%
+		&::after
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			left: 0
+			top: 1px
+			background-image: url('../img/user.png')
+			background-repeat: no-repeat
+			background-position: top center
+	&__right-body
+		@include max-screen($lg)
+			text-align: center
+			padding-bottom: 40px
+		p
+			span
+				font-weight: 600
+
+.credits
+	.container
+		@include max-screen($md)
+			padding: 0
+	&__row
+		display: flex
+		justify-content: space-between
+		background-color: $bg
+		padding: 93px 80px 80px 105px
+		@include max-screen($xl)
+			padding: 50px
+		@include max-screen($lg)
+			flex-direction: column
+		@include max-screen($md)
+			padding: 30px
+		@include max-screen($sm)
+			padding: 30px 15px
+	p
+		margin-bottom: 30px
+	.legislation-title
+		text-align: left
+		padding-left: 10px
+		margin-bottom: 30px
+		span
+			line-height: 33px
+			@include max-screen($md)
+				line-height: 22px
+	&__left
+		flex: 0 1 48%
+		margin-right: 4%
+		@include max-screen($lg)
+			flex: 0 1 100%
+			margin-right: 0
+			margin-bottom: 30px
+		@include max-screen($xsm)
+			display: flex
+			flex-direction: column
+	&__right
+		flex: 0 1 48%
+		position: relative
+		height: 516px
+		@include max-screen($lg)
+			flex: none
+			width: 100%
+		@include max-screen($md)
+			height: 400px
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: 100%
+			background-image: url('../img/credits-bg.png')
+			background-repeat: no-repeat
+			background-position: center right
+			@include max-screen($lg)
+				background-position: center
+				font-size: 10px
+				width: 45.6em
+				height: 45.6em
+				left: 50%
+				transform: translate(-50%, 0%)
+			@include max-screen($md)
+				font-size: 8px
+			@include max-screen($sm)
+				font-size: 7px
+			@include max-screen($xsm)
+				font-size: 6px
+		&::after
+			content: ''
+			position: absolute
+			bottom: 30px
+			left: 0
+			z-index: 1
+			width: 260px
+			height: 135px
+			background-image: url('../img/credits-img-2.png')
+			background-repeat: no-repeat
+			background-position: center
+			background-color: #fff
+			border-radius: 3px
+			box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.09)
+			@include max-screen($lg)
+				display: none
+	&__right-el
+		background-image: url('../img/credits-img.png')
+		background-repeat: no-repeat
+		background-position: left
+		width: 100%
+		height: 100%
+		position: absolute
+		left: 0
+		top: 0
+		@include max-screen($lg)
+			background-position: center
+			width: 48em
+			height: 28em
+			font-size: 10px
+			background-size: contain
+			top: 20%
+		@include max-screen($md)
+			font-size: 9px
+		@include max-screen($sm)
+			font-size: 7px
+		@include max-screen($xsm)
+			font-size: 5.5px
+			top: 10%
+.guide
+	overflow: hidden
+	.swiper-container
+		overflow: visible
+	h2
+		text-align: center
+	&__row
+		display: flex
+		justify-content: space-between
+		margin-bottom: 40px
+		@include max-screen($xl)
+			flex-wrap: wrap
+		@include max-screen($lg)
+			justify-content: flex-start
+		@include max-screen($md)
+			flex: none
+			flex-wrap: nowrap
+			justify-content: flex-start
+	.swiper-slide
+		height: auto
+	&__elem
+		flex: 0 1 198px
+		display: flex
+		flex-direction: column
+		// justify-content: center
+		align-items: center
+		@include max-screen($xl)
+			flex: 0 1 24%
+			margin-bottom: 20px
+		@include max-screen($lg)
+			flex: 0 1 32.333%
+			text-align: center
+		@include max-screen($md)
+			flex: none
+		p
+			font-size: 14px
+			line-height: 24px
+			span
+				font-weight: 600
+				font-size: 14px
+				display: block
+				line-height: 24px
+	&__elem-figure, &__elem-figure-n
+		position: relative
+		height: 198px
+		overflow: hidden
+		width: 198px
+		height: 198px
+		background-color: $bg
+		border-radius: 50%
+		margin-bottom: 30px
+	&__elem-figure
+		&::after
+			content: ''
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			background-image: url('../img/user.png')
+			background-repeat: no-repeat
+			background-position: 50% -150%
+			background-size: cover
+			// background-size: cover
+	.swiper-pagination
+		width: 100%
+		position: absolute
+		z-index: 10
+		height: 50px
+		bottom: -30px
+		text-align: center
+		display: -webkit-box
+		display: -ms-flexbox
+		display: none
+		justify-content: center
+		align-items: center
+		@media screen and(max-width: $md)
+			display: flex
+	.swiper-wrapper
+		padding-bottom: 20px
+	.swiper-pagination-bullet
+		background-color: $bg
+		opacity: 1 !important
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		margin: 0 8px !important
+		position: relative
+		bottom: 0px
+		left: 0
+		cursor: pointer
+		outline: none
+	.swiper-pagination-bullet-active
+		background-color: $accent
+
+.docum
+
+	&__target
+		margin-bottom: 40px
+		text-align: center
+		@media screen and(max-width: $md)
+			margin-bottom: 30px
+		.tabs
+			display: inline-flex
+			flex-wrap: wrap
+			@media screen and(max-width: $md)
+				padding: 20px 15px
+			@media screen and(max-width: 360px)
+				width: 100%
+				flex-direction: column
+				align-items: center
+		.tab
+			@media screen and(max-width: $md)
+				padding-left: 18px
+				padding-right: 18px
+
+	
+
+
+	&__target-item
+		padding: 15px
+		margin-right: 10px
+		border-radius: 3px
+		font-weight: 600
+		cursor: pointer
+		@media screen and(max-width: $lg)
+			flex: 0 1 45%
+			margin-right: 0
+		@media screen and(max-width: $sm)
+			padding: 10px
+		@media screen and(max-width: $xsm)
+			font-size: 14px
+
+	&__target-item.active
+		padding: 15px
+		background-color: $bg-dark
+		margin-right: 10px
+		border-radius: 3px
+		color: $white
+		@media screen and(max-width: $sm)
+			padding: 5px
+			display: flex
+			justify-content: center
+			align-items: center
+	.myCont__wrap
+		display: flex
+		// justify-content: space-between
+		flex-wrap: wrap
+		width: 100%
+		margin: 0 -10px
+		@include max-screen($sm)
+			margin: 0
+	.myCont__column
+		padding: 0 10px
+		flex: 0 1 25%
+		margin-bottom: 20px
+		@media screen and(max-width: $xl)
+			flex: 0 1 33%
+		@media screen and(max-width: $lg)
+			flex: 0 1 50%
+		@media screen and(max-width: $sm)
+			flex: 0 1 100%
+			padding: 0
+	.myCont__elem
+		min-height: 150px
+		height: 100%
+		display: flex
+		align-items: center
+		background-color: $bg
+		border-radius: 3px
+		padding: 40px 20px 75px 27px
+		transition: all ease .2s
+		@media screen and(max-width: $sm)
+			min-height: 80px
+			padding: 25px 15px
+		&:hover
+			transition: all ease .2s
+			box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.13)
+	.myCont__elem-img
+		margin-right: 20px
+		flex-shrink: 0
+	.myCont__elem-body
+		span
+			font-size: 14px
+	.br
+		display: block
+		@include max-screen($md)
+			display: inline-block
+
+.appreciate
+	position: relative
+	background-image: url('../img/appreciate-bg.jpg')
+	background-repeat: no-repeat
+	background-position: center
+	background-size: cover
+	height: 770px
+	@include max-screen($md)
+		background-position: right
+	&::before
+		width: 100%
+		height: 100%
+		content: ''
+		position: absolute
+		top: 0
+		right: 0
+		background-position: 84% 45%
+		background-image: url('../img/appreciate-img.png')
+		background-repeat: no-repeat
+		@include max-screen($md)
+			background-position: 84% 65%
+		@include max-screen($sm)
+			background-position: 100% 65%
+		@include max-screen($xsm)
+			background-position: 100% 70%
+	&__top
+		width: 700px
+		margin: 0px auto 44px auto
+		text-align: center
+		@include max-screen($md)
+			width: 100%
+		.title-2
+			display: none
+			@include max-screen($md)
+				display: block
+		.fz-26
+			@include max-screen($md)
+				margin-bottom: 50px
+	&__img
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 50px
+	&__block
+		width: 540px
+		@include max-screen($md)
+			display: none
+
+	+ .section
+		margin-top: 0
+
+

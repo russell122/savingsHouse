@@ -1,0 +1,124 @@
+.news
+
+	.f-col
+		margin-bottom: 30px
+		@include max-screen($xl)
+			width: 50%
+		@include max-screen($md)
+			width: 100%
+			
+
+	&-thumb
+		display: flex
+		flex-direction: column
+		height: 100%
+		border-radius: 3px
+		overflow: hidden
+		background: $bg
+		transition: all .2s linear
+		&:hover
+			background: $white
+			box-shadow: 0px 0px 62px 0px rgba(0,0,0,0.12)
+			.news-thumb__img
+				.img
+					transform: scale(1.1)
+					transition-duration: 2s
+			.news-thumb__body::after
+				opacity: 0
+			.news-thumb__btn
+				opacity: 1
+				visibility: visible
+
+		&__img
+			overflow: hidden
+			height: 220px
+			a
+				display: block
+				width: 100%
+				height: 100%
+			.img
+				transition: all .2s linear
+			@include max-screen($md)
+				height: 50vw
+				max-height: 220px
+
+
+		&__body
+			flex: 1
+			position: relative
+			padding: 40px 40px 30px
+			&::after
+				content: ''
+				position: absolute
+				bottom: 0
+				right: 0
+				width: 22px
+				height: 22px
+				background: #BEBEBE
+				border: 11px solid transparent
+				border-right: 11px solid #fff
+				border-bottom: 11px solid #fff
+				border-radius: 5px 0 0 0
+				transition: all .2s linear
+			@include max-screen($lg)
+				padding: 25px 25px 35px
+
+		&__date
+			margin-bottom: 35px
+			color: $sub
+			@include max-screen($md)
+				margin-bottom: 15px
+
+		&__title
+			margin-bottom: 10px
+
+		&__btn
+			margin-top: 30px
+			opacity: 0
+			visibility: hidden
+			transition: all .2s linear
+			.button
+				min-width: 132px
+			@include max-screen($xl)
+				display: none
+
+
+
+	&-more
+		margin-top: 24px
+		text-align: center
+		.buttom
+			min-width: 214px
+		@include max-screen($md)
+			margin-top: 5px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @include max-screen($xl)
+
+// @include min-screen(1200px)
+
+
+
+
+

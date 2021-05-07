@@ -1,0 +1,125 @@
+.security
+	h2.title-2
+		text-align: center
+	&__row
+		display: flex
+		justify-content: space-between
+		@include max-screen($xl)
+			flex-direction: column
+	&__left
+		flex: 0 1 44%
+		margin-right: 2%
+		@include max-screen($xl)
+			margin-right: 0
+			flex: 0 1 100%
+			margin-bottom: 30px
+	&__left-body
+		border-radius: 3px
+		border: solid 2px #efefef
+		padding: 59px 90px 52px 64px
+		margin-bottom: 30px
+		@include max-screen($md)
+			padding: 30px 50px 30px 50px
+		@include max-screen($sm)
+			padding: 0
+			border: none
+		span
+			font-size: 17px
+			line-height: 24px
+			@include max-screen($md)
+				font-size: 16px
+		.fz-26
+			@include max-screen($md)
+			font-size: 20px
+	&__left-info
+		box-shadow: 0 0 62px 0 rgba(0, 0, 0, 0.13)
+		padding: 60px 95px 65px 62px
+		@include max-screen($md)
+			padding: 30px 50px 30px 50px
+		@include max-screen($sm)
+			padding: 0
+			box-shadow: none
+		p
+			font-size: 17px
+			line-height: 24px
+			color: $black
+			@include max-screen($md)
+				font-size: 16px
+	&__right
+		flex: 0 1 54%
+		position: relative
+		@include max-screen($xl)
+			flex: 0 1 100%
+	&__right__bl
+		display: flex
+		justify-content: space-between
+		@include max-screen($md)
+			flex-direction: column-reverse
+		@include max-screen($sm)
+			display: flex
+			justify-content: center
+			align-items: center
+	&__right-ob
+		border-radius: 3px
+		border: solid 2px #efefef
+		box-shadow: 0 0 62px 0 rgba(0, 0, 0, 0.13)
+		width: 300px
+		height: 150px
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: all ease .2s
+		@include max-screen($md)
+			margin-bottom: 30px
+			width: 100%
+
+		&:hover
+			box-shadow: 0 0 62px 0 rgba(0, 0, 0, 0.17)
+			transition: all ease .2s
+	&__right-fig
+		position: relative
+		top: -50px
+		z-index: 1
+		font-size: 10px
+		width: 42em
+		height: 45em
+		@include max-screen($md)
+			// font-size: 8px
+			margin-bottom: 30px
+			top: 0
+		@include max-screen($sm)
+			font-size: 6px
+		@include max-screen($xsm)
+			font-size: 5px
+		&::before
+			content: ''
+			display: block
+			width: 3px
+			height: 224px
+			position: absolute
+			z-index: 1
+			left: 16em
+			top: 0em
+			background: #bb1631
+			transform: skewX(-31deg)
+			@include max-screen($md)
+				left: 12em
+	&__right-svid
+		background-color: #f2f2f2
+		width: 90%
+		padding: 54px 198px 60px 204px
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		left: 0
+		top: 220px
+		z-index: 2
+		@include max-screen($xl)
+			padding: 50px 150px 50px 150px
+			position: relative
+			top: 0
+			width: 100%
+		@include max-screen($xsm)
+			padding: 0px
+			background: transparent

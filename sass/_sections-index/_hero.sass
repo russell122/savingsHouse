@@ -1,0 +1,194 @@
+.hero
+	position: relative
+	@include min-screen(1200px)
+		margin-bottom: 130px
+
+	&__slider
+		.swiper-slide
+			height: auto
+
+	&-slide
+		height: 100%
+		padding: 250px 0 150px
+		background-repeat: no-repeat
+		background-position: 100% 100%
+		background-size: cover
+		@include max-screen($xl)
+			padding-top: 200px
+		@include max-screen($md)
+			padding: 165px 0 35px
+		&-1, &-2
+			color: $white
+		&-3
+			background-color: $bg
+			background-position: 100% 0
+			background-size: 1440px auto
+
+			@include max-screen($xl)
+				background-size: 92% auto
+				.hero-geo .img
+					filter: brightness(.5)
+
+			@include max-screen($md)
+				background-size: 1200px auto
+				background-position-x: -313px
+				.hero-advantages
+					max-width: 66%
+
+
+			@include min-screen(1660px)
+				background-size: 1640px auto
+				background-position-y: -126px
+
+
+
+	&__title
+		max-width: 800px
+		@include min-screen(1200px)
+			min-height: 198px
+		@include max-screen($xl)
+			max-width: 700px
+		span
+			font-weight: 400
+
+
+	&__row
+		position: relative
+		margin-top: 90px
+		@include max-screen($xl)
+			display: block
+		@include max-screen($md)
+			margin-top: 24px
+
+	&-advantages
+		display: flex
+		font-weight: 600
+		max-width: 690px
+		li
+			flex: 0 1 auto
+			min-width: 135px
+			margin-right: 55px
+		@include max-screen($xl)
+			max-width: 100%
+			br
+				display: none
+		@include max-screen($md)
+			display: block
+			li
+				margin-right: 0
+				margin-bottom: 9px
+	
+
+	&-geo
+		max-width: 185px
+		position: absolute
+		right: 25px
+		bottom: 32px
+		font-weight: 600
+		line-height: 1.1
+		letter-spacing: $ls
+		&::before
+			content: ''
+			display: block
+			width: 15px
+			height: 150px
+			position: absolute
+			z-index: 0
+			left: -82px
+			top: -14px
+			background: $accent
+			transform: skewX(-31deg)
+		.img
+			max-width: 107px
+			max-height: 62px
+			margin-bottom: 15px
+
+		@include max-screen($xl)
+			position: relative
+			right: auto
+			bottom: auto
+			margin-top: 30px
+			&::before
+				height: 120px
+				top: 0
+				left: auto
+				right: -100px
+
+		@include max-screen($md)
+			max-width: 135px
+			.fz-22
+				font-size: 16px
+				line-height: 1.4
+			.img
+				max-width: 84px
+				max-height: 50px
+			&::before
+				width: 9px
+				height: 80px
+				top: 25px
+				left: auto
+				right: -132px
+				
+
+	&-btn
+		.button
+			min-width: 184px
+		@include max-screen($xl)
+			margin-top: 40px
+			text-align: center
+
+
+
+	&-tabs
+		width: 100%
+		position: absolute
+		z-index: 1
+		bottom: 0
+		transform: translateY(50%)
+
+	&-tab
+		width: 33.33333%
+		height: 110px
+		border: none
+		background: $white
+		color: $accent
+		border: 1px solid #efefef
+		position: relative
+		overflow: visible
+		&::before
+			content: ''
+			display: block
+			width: 22px
+			height: 22px
+			position: absolute
+			z-index: 0
+			top: -9px
+			left: 50%
+			margin-left: -13px
+			background: $white
+			transform: rotate(45deg)
+			opacity: 0
+			transition: all .1s linear
+		&:hover, &.is-active
+			z-index: 1
+			border-color: $white
+			box-shadow: 0px 0px 62px 0px rgba(0,0,0,0.14)
+			color: $text-color
+			&::before
+				opacity: 1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

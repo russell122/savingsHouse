@@ -1,0 +1,34 @@
+.partners
+	&__row
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 34px
+		border-top: 1px solid #ededed
+		border-left: 1px solid #ededed
+	&__elem
+		border-right: 1px solid #ededed
+		border-bottom: 1px solid #ededed
+		flex: 0 1 16.6666667%
+		height: 125px
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: all ease .2s
+		&:hover
+			box-shadow: 0px 5px 10px 1px rgba(34, 60, 80, 0.2) inset
+			transition: all ease .2s
+		@include max-screen($xl)
+			flex: 0 1 20%
+		@include max-screen($lg)
+			flex: 0 1 25%
+		@include max-screen($md)
+			flex: 0 1 25%
+			padding: 10px
+		@include max-screen($sm)
+			flex: 0 1 33.333%
+		@include max-screen($xsm)
+			flex: 0 1 50%
+	&__btns
+		display: flex
+		justify-content: center
+		align-items: center

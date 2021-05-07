@@ -1,0 +1,35 @@
+extends layout/main
+
+block variables
+	- let title = 'Главная'
+	- let page = 'Home'
+
+
+
+block content
+	include sections-index/hero
+	include sections-index/calc
+	include sections-index/programms
+	include sections-index/advantages
+	include sections-index/sheme
+	include sections-index/how
+	include sections/page-form
+	include sections-index/security
+	include sections-index/legislation
+	include sections-index/partners
+	include sections-index/loans
+	include sections-index/aboutus
+	include sections-index/news
+	include sections/page-form2
+
+
+
+
+
+//- block libs-css
+	// библиотека.css
+	link(rel="stylesheet" href="libs/library/library.css")
+
+//- block libs-js
+	// библиотека.js
+	script(src="libs/library/library.js")

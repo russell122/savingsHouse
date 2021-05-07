@@ -1,0 +1,287 @@
+/* ------------------------------------- 
+	Reset 
+	------------------------------------- */
+
+article, aside, dialog, figcaption, figure, footer, header, main, nav, section, details, menu
+	display: block
+
+@-ms-viewport
+	width: device-width
+
+html
+	box-sizing: border-box
+	font-family: sans-serif
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+	-ms-overflow-style: scrollbar
+	-webkit-tap-highlight-color: transparent
+
+*
+	-webkit-box-sizing: inherit
+	box-sizing: inherit
+	&::before, &::after
+		-webkit-box-sizing: inherit
+		box-sizing: inherit
+
+body
+	margin: 0
+	position: relative
+	font: 17px/1.4 $default-font, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
+	text-align: left
+	color: $text-color
+	background-color: $white
+	overflow-x: hidden
+	@include max-screen($md)
+		font-size: 16px
+
+
+h1, h2, h3, h4, h5, h6, .title
+	letter-spacing: $ls
+	font-weight: 600
+h1, h2, h3, h4, h5, h6
+	margin-top: 0
+	margin-bottom: .5em
+
+p
+	margin: 0 0 1em
+	&:last-child
+		margin-bottom: 0
+
+address
+	margin-bottom: 1rem
+	font-style: normal
+	line-height: inherit
+
+ol, ul
+	margin: 0
+	padding: 0
+	list-style: none
+
+blockquote
+	margin: 0 0 1rem
+
+b, strong
+	font-weight: 700
+
+small
+	font-size: 80%
+
+sub, sup
+	font-size: 75%
+	line-height: 0
+	position: relative
+	vertical-align: baseline
+sub
+	bottom: -0.25em
+sup
+	top: -0.5em
+
+a
+	color: inherit
+	text-decoration: none
+	background-color: transparent
+	-webkit-text-decoration-skip: objects
+	@include trs(.05s)
+	&:hover
+		color: inherit
+	&:focus
+		outline: none
+	&:hover, &:focus
+		text-decoration: none
+	&:active, &:hover
+		outline-width: 0
+	&:not([href]):not([tabindex])
+		color: inherit
+		text-decoration: none
+		&:focus, &:hover
+			color: inherit
+			text-decoration: none
+		&:focus
+			outline: 0
+
+figure
+	margin: 0 0 1rem
+
+img
+	font-size: 10px
+	text-transform: uppercase
+	color: $accent
+	vertical-align: middle
+	border-style: none
+	&::selection
+		background: none
+
+svg:not(:root)
+	overflow: hidden
+
+table
+	width: 100%
+	border-collapse: collapse
+	background-color: transparent
+
+caption
+	padding-top: 0.75rem
+	padding-bottom: 0.75rem
+	color: $text-color
+	text-align: left
+	caption-side: bottom
+
+th
+	text-align: inherit
+
+label
+	display: inline-block
+	margin-bottom: .5rem
+
+a, area, button, [role="button"], input, label, select, summary, textarea
+	-ms-touch-action: manipulation
+	touch-action: manipulation
+
+button
+	padding: 0
+	background-color: transparent
+	border: none
+	border-radius: 0
+	cursor: pointer
+	&:focus
+		outline: none
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner
+	border-style: none
+	padding: 0
+
+input, button, select, optgroup, textarea
+	margin: 0
+	font-family: inherit
+	font-size: inherit
+	line-height: inherit
+
+button, input
+	overflow: visible
+
+button, select
+	text-transform: none
+
+button, html [type="button"], [type="reset"], [type="submit"]
+	-webkit-appearance: button
+
+button::-moz-focus-inner, [type="button"]::-moz-focus-inner, [type="reset"]::-moz-focus-inner, [type="submit"]::-moz-focus-inner
+	padding: 0
+	border-style: none
+
+fieldset
+	min-width: 0
+	padding: 0
+	margin: 0
+	border: 0
+legend
+	display: block
+	width: 100%
+	padding: 0
+	margin-bottom: .5rem
+	font-size: 1.5rem
+	line-height: inherit
+
+input
+	&[type="radio"], &[type="checkbox"]
+		box-sizing: border-box
+		padding: 0
+	&[type="radio"]:disabled, &[type="checkbox"]:disabled
+		cursor: not-allowed
+	&[type="date"], &[type="time"], &[type="datetime-local"], &[type="month"]
+		-webkit-appearance: listbox
+	&[type="search"]
+		-webkit-appearance: textfield
+		outline-offset: -2px
+		&::-webkit-search-cancel-button, &::-webkit-search-decoration
+			-webkit-appearance: none
+
+label
+	display: block
+	margin: 0
+
+textarea
+	overflow: auto
+	resize: vertical
+
+[type="checkbox"], [type="radio"]
+	-webkit-box-sizing: border-box
+	box-sizing: border-box
+	padding: 0
+
+
+[tabindex="-1"]:focus
+	outline: 0 !important
+
+[role="button"]
+	cursor: pointer
+
+::-webkit-file-upload-button
+	font: inherit
+	-webkit-appearance: button
+
+[hidden]
+	display: none !important
+
+
+.swiper
+	&-slide
+		*
+			box-sizing: border-box
+	&-pagination-bullet
+		outline: none
+
+
+
+.fancybox-bg
+	background: $bg-dark
+	opacity: 0.7
+
+.fancybox-toolbar
+	.fancybox-button
+		background: $accent
+		path
+			fill: $white
+		&:hover
+			background: lighten($accent, 10)
+
+.fancybox-navigation
+	.fancybox-button
+		background: none
+		div
+			background: $accent
+		&:hover
+			div
+				background: lighten($accent, 10)
+
+.fancybox-slide
+	padding: 20px
+
+
+.fancybox-slide--html .fancybox-close-small
+	padding: 0
+	top: 20px
+	right: 20px
+
+
+.simplebar-track.simplebar-vertical
+	width: 8px
+	right: 5px
+	.simplebar-scrollbar
+		width: 100%
+		right: 0
+		&::before
+			opacity: .1
+			background: $text-color
+
+
+
+
+
+
+
+
+
+
+
+

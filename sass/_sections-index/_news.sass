@@ -1,0 +1,174 @@
+.basketSlider.news
+	padding-top: 60px
+	overflow: hidden
+	// background-color: red
+	@media screen and(max-width: $lg)
+		text-align: center
+		padding-top: 40px
+	@media screen and(max-width: $md)
+		padding: 50px 0 40px
+		text-align: center
+	@media screen and(max-width: $sm)
+		padding: 20px 0 20px
+		text-align: center
+	.swiper-container
+		overflow: visible
+	.basketSlider-elem
+		background-color: $bg
+		display: flex
+		flex-direction: column
+		position: relative
+		padding: 40px 64px 32px 35px
+		height: 100%
+		border-top: 2px solid #000
+		&::before
+			content: ''
+			position: absolute
+			bottom: 0px
+			right: 0px
+			border-style: solid
+			border-width: 22px 22px 0px 0
+			border-color: #bebebe #fff #fff #bebebe
+		p
+			margin-bottom: 70px
+			font-weight: 600
+			color: #292d30
+		span
+			font-size: 14px
+			color: #999999
+	h2
+		margin-bottom: 57px
+		font-size: 30px
+		line-height: 52px
+		@media screen and(max-width: $lg)
+			margin-bottom: 100px
+			font-size: 26px
+		@media screen and(max-width: $md)
+			font-size: 24px
+		@media screen and(max-width: $md)
+			font-size: 22px
+		@media screen and(max-width: $sm)
+			font-size: 20px
+			margin-bottom: 70px
+	.basketSlider__slider-nav
+		position: absolute
+		top: 23px
+		right: 0
+		display: flex
+		@media screen and(max-width: $lg)
+			width: 100%
+			justify-content: center
+			top: 55px
+			align-items: center
+		@media screen and(max-width: $sm)
+			top: 40px
+		@media screen and(max-width: $xsm)
+			top: 50px
+		a
+			position: relative
+			top: -6px
+			font-weight: 600
+			font-size: 17px
+			color: $accent
+			margin-right: 30px
+			@media screen and(max-width: $sm)
+				display: none
+	.basketSlider__product
+		min-width: 0
+	.swiper-slide
+		@media screen and(max-width: 1600px)
+			display: flex
+			justify-content: center
+			align-items: center
+	.swiper-button-next
+		img, svg
+			transform: rotate(180deg)
+			transition: all ease .2
+	.swiper-button-prev, .swiper-button-next
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: center
+		position: static
+		margin-right: 20px
+		outline: none
+		border-radius: 50%
+		font-size: 10px
+		transition: all ease .2s
+		opacity: 1 !important
+		width: 57px
+		height: 57px
+		background-color: $bg
+		svg
+			transition: all ease .2
+			fill: $black
+		img, svg
+			width: 20px
+			transition: all ease .2
+		&:after
+			content: ''
+		&:hover
+			svg
+				fill: $accent
+				transition: all ease .2
+		.svg-sprite-icon
+			width: 12px
+			height: 12px
+			fill: $accent
+			transition: all ease .2s
+		@media screen and(max-width: $lg)
+			margin: 0 10px
+	.swiper-button-prev .svg-sprite-icon
+		margin-left: -3px
+	.swiper-button-next .svg-sprite-icon
+		margin-right: -3px
+	&-slider__swiper-body
+		@media screen and(max-width: $sm)
+			font-size: 14px
+	&-slider__swiper-img
+		margin-bottom: 10px
+	&-slider__swiper-elem
+		color: $black
+		text-decoration: none
+		p
+			transition: all ease .2s
+		&:hover
+			p
+				color: $accent
+	&-slider__swiper-img
+		transition: all ease .2s
+	.swiper-pagination
+		width: 100%
+		position: absolute
+		z-index: 10
+		height: 50px
+		bottom: -30px
+		text-align: center
+		display: -webkit-box
+		display: -ms-flexbox
+		display: none
+		justify-content: center
+		align-items: center
+		@media screen and(max-width: $md)
+			display: flex
+	.swiper-wrapper
+		padding-bottom: 50px
+	.swiper-pagination-bullet
+		background-color: $bg
+		opacity: 1 !important
+		width: 14px
+		height: 14px
+		border-radius: 50%
+		margin: 0 8px !important
+		position: relative
+		bottom: 0px
+		left: 0
+		cursor: pointer
+		outline: none
+	.swiper-pagination-bullet-active
+		background-color: $accent
+.mainpage .sectificate
+	padding: 50px 0 80px
+	background: none
+	.g-title
+		margin-bottom: 1em

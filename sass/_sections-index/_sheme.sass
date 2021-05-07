@@ -1,0 +1,215 @@
+
+.advantages + .sheme
+	@include max-screen($md)
+		margin-top: -40px
+	
+.sheme
+
+
+	&__bg
+		padding: 70px
+		background: $bg-dark
+		border-radius: 3px
+		color: $white
+		@include max-screen($xl)
+			padding: 50px
+		@include max-screen($lg)
+			width: calc(100% + 40px)
+			margin-left: -20px
+			border-radius: 0
+		@include max-screen($md)
+			padding: 45px 20px
+
+	&-container
+		display: flex
+		flex-direction: column
+		@include max-screen($md)
+			display: block
+
+	&-row
+		padding: 0 30px 
+		@include max-screen($lg)
+			padding: 0
+
+
+	&-item
+		display: flex
+		&__num
+			margin: 0 40px 0 0
+		@include max-screen($lg)
+			&__num
+				margin-right: 20px
+		@include max-screen($md)
+			margin-bottom: 15px
+
+		&__txt
+			font-size: 14px
+			line-height: 1.6
+			opacity: 0.5
+			@include max-screen($md)
+				br
+					display: none
+
+
+	&-blocks, &-row-2
+		order: 1
+
+	&-blocks
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin: 35px 0
+		padding: 40px 0
+		@include max-screen($xl)
+			padding: 24px 0
+		@include max-screen($lg)
+			padding: 19px 0
+		@include max-screen($md)
+			display: block
+			margin: 0
+			padding: 0 65px
+			position: relative
+
+		&__num
+			margin: 0
+			position: absolute
+			&-3, &-4
+				left: 0
+			&-1, &-2
+				right: 0
+			&-1, &-4
+				top: 118px
+			&-2, &-3
+				bottom: 118px
+
+
+
+	&-block
+		width: 328px
+		height: 172px
+		font-size: 28px
+		font-weight: 700
+		line-height: 1
+		position: relative
+		background-color: #353847
+		box-shadow: 0px 0px 24px 0px rgba(0,0,0,0.02)
+		border-radius: 3px
+		&__ic
+			font-size: .3571428571428571em
+			width: 4.4em
+			height: 4.4em
+			margin-right: 22px
+		.logo
+			font-size: .3571428571428571em
+			width: 18.2em
+			height: 5.4em
+		
+		&-1, &-3
+			&::before, &::after
+				content: ''
+				display: block
+				font-size: 10px
+				width: 57.9em
+				height: 3.8em
+				position: absolute
+				z-index: 0
+				background-repeat: no-repeat
+				background-position: 50% 50%
+				background-size: contain
+			&::before
+				background-image: url('../img/sheme-arrow-white-desktop.png')
+			&::after
+				background-image: url('../img/sheme-arrow-accent-desktop.png')
+		&-1
+			&::before, &::after
+				left: 35px
+			&::before
+				bottom: 100%
+			&::after
+				top: 100%
+				transform: scale(-1)
+		&-3
+			&::before, &::after
+				right: 35px
+			&::before
+				top: 100%
+				transform: scale(-1)
+			&::after
+				bottom: 100%
+		@include max-screen($xl)
+			width: 256px
+			height: 140px
+			font-size: 24px
+			&-1, &-3
+				&::before, &::after
+					font-size: 6.1px
+		@include max-screen($lg)
+			&-1, &-3
+				&::before, &::after
+					font-size: 4.9px
+
+		@include max-screen($md)
+			width: 100%
+			height: 112px
+			font-size: 18px
+			margin-bottom: 40px
+			&__ic
+				font-size: 8px
+				margin-right: 12px
+			&-1, &-3
+				&::before, &::after
+					font-size: 10px
+					width: 3em
+					height: 15.1em
+				&::before
+					background-image: url('../img/sheme-arrow-white-mob.png')
+				&::after
+					background-image: url('../img/sheme-arrow-accent-mob.png')
+			&-1
+				&::before, &::after
+					left: auto
+					bottom: auto
+					top: 51px
+				&::before
+					left: 100%
+					transform: scale(-1)
+				&::after
+					right: 100%
+					transform: none
+			&-3
+				&::before, &::after
+					right: auto
+					top: auto
+					bottom: 51px
+				&::before
+					right: 100%
+					transform: none
+				&::after
+					left: 100%
+					transform: scale(-1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @include max-screen($xl)
+
+// @include min-screen(1200px)
+
+
+
+
+

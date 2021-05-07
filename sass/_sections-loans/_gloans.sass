@@ -1,0 +1,334 @@
+.gloans-hero
+	&__block
+		background-image: url('../img/g-loans-bg.jpg')
+		background-repeat: no-repeat
+		background-position: center
+		height: 596px
+		width: 100%
+		position: relative
+		z-index: 2
+		display: flex
+		// justify-content: center
+		align-items: flex-end
+		@include max-screen($md)
+			align-items: center
+			justify-content: center
+		@include max-screen($sm)
+			height: 400px
+		&::before
+			content: ''
+			position: absolute
+			z-index: 1
+			width: 100%
+			height: 100%
+			background-color: rgba(82, 86, 104, 0.5)
+	.title-1
+		position: relative
+		z-index: 2
+		color: $white
+		margin-bottom: 0
+		padding: 0 0 102px 122px
+		@include max-screen($md)
+			padding: 0
+			text-align: center
+	.container
+		@include max-screen($md)
+			padding: 0
+	.br
+		display: block
+		@include max-screen($md)
+			display: inline-block
+
+.gloans-adv
+	background-color: $bg
+	&__row
+		display: flex
+		justify-content: space-between
+		padding: 60px 0
+		@include max-screen($lg)
+			flex-direction: column
+	&__left
+		flex: 0 1 45%
+		margin-right: 5%
+		@include max-screen($lg)
+			margin-right: 0
+			flex: 0 1 100%
+	&__right
+		flex: 0 1 49%
+		@include max-screen($lg)
+			flex: 0 1 100%
+	&__right-img
+		position: relative
+		&::before
+			content: ''
+			position: absolute
+			left: -24px
+			bottom: 100px
+			border: 24px solid transparent
+			border-bottom: 35px solid rgb(187, 22, 49)
+			display: block
+			width: 0
+			height: 0
+			@include max-screen($lg)
+				left: -12px
+			@include max-screen($sm)
+				border: 18px solid transparent
+				border-bottom: 28px solid rgb(187, 22, 49)
+				left: -17.5px
+		&::after
+			content: ''
+			position: absolute
+			left: 200px
+			bottom: -26px
+			border: 16px solid transparent
+			border-top: 26px solid rgb(187, 22, 49)
+			display: block
+			width: 0
+			height: 0
+			@include max-screen($sm)
+				border: 12px solid transparent
+				border-top: 20px solid rgb(187, 22, 49)
+				left: 80px
+				bottom: -20px
+	&__left-row
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+	&__left-elem
+		flex: 0 1 48%
+		width: 48%
+		min-height: 90px
+		display: flex
+		flex-direction: column
+		justify-content: space-between
+		margin-bottom: 50px
+		@include max-screen($lg)
+			flex: 0 1 48%
+			width: 48%
+		.line
+			border: 1px solid $text-color
+		.br
+			display: block
+			@include max-screen($md)
+				display: inline-block
+		span
+			@include max-screen($sm)
+				margin-bottom: 20px
+
+.gloans-programs
+	h2
+		text-align: center
+	&__row
+		display: flex
+		justify-content: space-between
+		@include max-screen($lg)
+			flex-direction: column
+	&__left, &__right
+		border-radius: 3px
+		box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.09)
+		background-color: #ffffff
+	&__left
+		flex: 0 1 49%
+		margin-right: 2%
+		@include max-screen($lg)
+			flex: 0 1 100%
+			margin-right: 0
+			margin-bottom: 30px
+	&__left-top
+		background-color: $bg-dark
+		padding: 30px 56px
+		border-top-left-radius: 3px
+		border-top-right-radius: 3px
+		@include max-screen($md)
+			padding: 30px
+		@include max-screen($sm)
+			padding: 15px
+		p
+			color: $white
+	&__left-body
+		padding: 44px 56px 0px 56px
+		@include max-screen($md)
+			padding: 30px 30px 0 30px
+		@include max-screen($sm)
+			padding: 30px 15px 0 30px
+	&__left-body-elem, &__right-body-elem
+		display: flex
+		align-items: center
+		padding-bottom: 20px
+		margin-bottom: 20px
+		&:not(:last-child)
+			border-bottom: 1px solid rgba(0, 0, 0, 0.09)
+		@include max-screen($sm)
+			flex-direction: column
+			align-items: flex-start
+		span
+			font-size: 15px
+			line-height: 20px
+			color: $sub
+			flex: 0 1 50%
+			margin-right: 5%
+		p
+			font-size: 15px
+			line-height: 20px
+			font-weight: 600
+			flex: 0 1 45%
+	&__left-btns, &__right-btns
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0 15px 44px 15px
+		.button
+			padding: 12px 100px
+			@include max-screen($sm)
+				width: 100%
+				padding: 12px 20px
+	&__right
+		flex: 0 1 49%
+		@include max-screen($lg)
+			flex: 0 1 100%
+	.fz-26
+		@include max-screen($md)
+			font-size: 22px
+		@include max-screen($sm)
+			text-align: center
+.gloans-join
+	&-block
+		position: relative
+		background-image: url('../img/gloans-plus-bg.jpg')
+		background-repeat: no-repeat
+		background-size: cover
+		height: 536px
+		@include max-screen($xl)
+			background-position: 70%
+		@include max-screen($md)
+			height: 430px
+		h2
+			width: 650px
+			color: $white
+			margin-bottom: 50px
+			@include max-screen($lg)
+				width: 100%
+	.container
+		@include max-screen($md)
+			padding: 0
+	&-body
+		padding: 125px 140px
+		@include max-screen($lg)
+			padding: 80px
+		@include max-screen($md)
+			padding: 50px
+		@include max-screen($md)
+			padding: 50px 20px
+		.button
+			width: 312px
+	.br
+		display: block
+		@include max-screen($md)
+			display: inline-block
+
+.gloans-plus
+	&__row
+		background-color: $bg
+		border-radius: 3px
+		padding: 65px 100px 0 100px
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		@include max-screen($md)
+			padding: 40px 50px 0 50px
+			flex-direction: column
+		@include max-screen($sm)
+			padding: 40px 15px 0 15px
+	&__elem
+		flex: 0 1 33.333%
+		margin-bottom: 70px
+		@include max-screen($md)
+			margin-bottom: 50px
+	&__elem-img
+		margin-bottom: 20px
+	p
+		width: 260px
+
+.gloans-docs
+	overflow: hidden
+	.swiper-container
+		overflow: visible
+	h2
+		text-align: center
+	&__row
+		display: flex
+		justify-content: space-between
+		margin-bottom: 40px
+		@include max-screen($xl)
+			flex-wrap: wrap
+		@include max-screen($md)
+			flex: none
+			flex-wrap: nowrap
+			justify-content: flex-start
+	.swiper-slide
+		height: auto
+	&__elem
+		border: solid 2px #efefef
+		border-radius: 3px
+		padding: 52px 30px 67px 40px
+		flex: 0 1 18%
+		transition: all ease .2s
+		// cursor: pointer
+		@include max-screen($xl)
+			flex: 0 1 24%
+			margin-bottom: 20px
+		@include max-screen($lg)
+			flex: 0 1 38%
+		@include max-screen($md)
+			flex: none
+			padding: 40px 30px
+		@include max-screen($md)
+			padding: 40px 20px
+		&:hover
+			box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.09)
+			transition: all ease .2s
+		span
+			font-size: 44px
+			line-height: 48px
+			letter-spacing: -1.1px
+			color: #be1733
+			font-weight: 600
+			margin-bottom: 20px
+			display: block
+	&__body
+		width: 760px
+		text-align: center
+		margin: 0 auto
+		@include max-screen($md)
+			width: 100%
+			text-align: left
+	.swiper-pagination
+		width: 100%
+		position: absolute
+		z-index: 10
+		height: 50px
+		bottom: -30px
+		text-align: center
+		display: -webkit-box
+		display: -ms-flexbox
+		display: none
+		justify-content: center
+		align-items: center
+		@media screen and(max-width: $md)
+			display: flex
+	.swiper-wrapper
+		padding-bottom: 20px
+	.swiper-pagination-bullet
+		background-color: $bg
+		opacity: 1 !important
+		width: 10px
+		height: 10px
+		border-radius: 50%
+		margin: 0 8px !important
+		position: relative
+		bottom: 0px
+		left: 0
+		cursor: pointer
+		outline: none
+	.swiper-pagination-bullet-active
+		background-color: $accent

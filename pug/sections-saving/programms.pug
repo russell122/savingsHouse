@@ -1,0 +1,87 @@
+
+mixin program(title, i, val1, val2, val3, val4, val5, val6, val7)
+	.program(class= 'program-' + i)
+
+		.program__row.flex
+
+			.program__side
+
+				.program__side-block
+					.title.title-2 !{title}
+					.program__img
+						img.img(src="img/program-ic-"+i+".png", alt="alt")
+					a.button.button--accent-bg.hide-xl(href="#") Оставить заявку
+
+			// /.program__side
+
+			.program__col
+
+				.program__table
+					.program__tr.program__sum
+						.program__label Сумма сбережений:
+						.program__val
+							span !{val1}
+
+					.program__tr
+						.program__label Сроки инвестирования:
+						.program__val !{val2}
+
+					.program__tr
+						.program__label Процентная ставка:
+						.program__val
+							span !{val3} 
+							| годовых
+
+					.program__tr
+						.program__label Зачисление процентов:
+						.program__val !{val4}
+
+					.program__tr
+						.program__label Обеспечение:
+						.program__val !{val5}
+						
+					.program__tr
+						.program__label Досрочное расторжение:
+						.program__val !{val6}
+
+					.program__tr
+						.program__label Необходимые документы:
+						.program__val !{val7}
+
+					.program__tr
+						.program__label Получение денежных средств:
+						.program__val Наличными в офисе, Переводом на любую карту, Зачислением на счёт сбережения
+
+				// /.program__table
+
+			// /.program__col
+		// /.program__row.flex
+		
+		.program__btn.show-xl
+			a.button.button--accent-bg(href="#") Оставить заявку
+
+	// /.program
+
+
+
+
+
+
+// programms
+section.section.programms.saving-programms
+
+	.container
+
+		.programms__title
+			h2.title-2 Выберите свою
+			.subtext Во всех программах имеется капитализация и пополнение счета
+
+		+program('Сберегательная', '1', 'От 5 000 Р до 1 400 000 Р', '1 год', '6%', 'Ежемесячно', 'Страхование', 'Есть, без потери процентов', 'Паспорт')
+
+		+program('Пенсионная', '2', 'От 5 000 Р<br> до 1 400 000 Р', '2 года', '7%', '1 раз в 3 месяца', 'Страхование', 'Есть, без потери процентов', 'Паспорт, пенсионное удостоверение')
+
+		+program('Инвестиционная', '3', 'От 1 450 000 Р', '3 года', '8,5%', '1 раз в 3 месяца', 'Залог недвижимости', 'Есть, без потери процентов', 'Паспорт')
+		
+	// /.container
+
+// /.programms

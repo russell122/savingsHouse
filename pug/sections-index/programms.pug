@@ -1,0 +1,97 @@
+
+mixin program(title, i, val1, val2, val3, val4, val5)
+	.program
+		.program__head(class= 'program__head-' + i)
+			.program__title !{title}
+			.program__head-img
+				img.img(src="img/program-ic-"+i+".png", alt="alt")
+		.program__body
+
+			.program__table
+				.program__tr.program__sum
+					.program__label Сумма сбережений:
+					.program__val
+						span !{val1}
+
+				.program__tr
+					.program__label Сроки инвестирования:
+					.program__val !{val2}
+
+				.program__tr
+					.program__label Процентная ставка:
+					.program__val
+						span !{val3} 
+						| годовых
+
+				.program__tr
+					.program__label Зачисление процентов:
+					.program__val !{val4}
+
+				.program__tr
+					.program__label Обеспечение:
+					.program__val !{val5}
+			// /.program__table
+			
+			.program__btn
+				button.button.button--accent-bd.js-open-modal(type="button", data-modal="#conditions") Полные условия
+
+	// /.program
+
+
+
+
+// programms
+section.section.programms
+
+	.container
+
+		.programms__title
+			h2.title-2 Наши программы
+			.subtext Во всех программах имеется капитализация и пополнение счета
+
+
+		
+		.programms__slider.swiper-container.swiper-mobile
+			.programms__row.f-row.swiper-wrapper
+				.swiper-slide.f-col.col-1-3
+					+program('Сберегательная', '1', 'От 5 000 Р<br> до 1 400 000 Р', '1 год', '6%', 'Ежемесячно', 'Страхование')
+				.swiper-slide.f-col.col-1-3
+					+program('Пенсионная', '2', 'От 5 000 Р<br> до 1 400 000 Р', '2 года', '7%', '1 раз в 3 месяца', 'Страхование')
+				.swiper-slide.f-col.col-1-3
+					+program('Инвестиционная', '3', 'От 1 450 000 Р', '3 года', '8,5%', '1 раз в 3 месяца', 'Залог недвижимости')
+
+		// /.programms__slider
+
+		.programms__dots.slider-dots.show-xl
+
+
+	// /.container
+
+// /.programms
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

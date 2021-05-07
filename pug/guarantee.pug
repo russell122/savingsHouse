@@ -1,0 +1,44 @@
+extends layout/main
+
+block variables
+	- let title = 'guarantee'
+	- let page = 'guarantee'
+
+
+
+block content
+	include sections-guarantee/hero
+	include sections-index/legislation
+	section.section.g-security2
+		.container 
+			.g-security2__row 
+				.g-security2__elem
+					span Работаем по всей
+						.br России
+					.line
+				.g-security2__elem
+					span Получение процентов
+						.br ежемесячно
+					.line
+				.g-security2__elem
+					span Досрочное расторжение 
+						.br без потери процентов
+					.line
+				.g-security2__elem
+					span Перечисление процентов
+						.br удобным Вам способом
+					.line
+	section.section.g-programs
+		.container 
+			.g-programs__row 
+				a(href="saving.html").g-programs__left
+					.g-programs__left-body
+						h4.fz-26 Наши программы сбережений
+					.g-programs__left-img
+						img.img(src="img/programs-img-1.png", alt="")
+				a(href="loans.html").g-programs__right
+					.g-programs__right-body
+						h4.fz-26 Займы
+					.g-programs__right-img
+						img.img(src="img/programs-img-2.png", alt="")
+	include sections/page-form2

@@ -1,0 +1,22 @@
+mixin logo
+	if page == 'home'
+		.logo
+			img.img(src="img/logo.svg", alt="Сберегательный дом")
+	else
+		.logo
+			a(href="index.html")
+				img.img(src="img/logo.svg", alt="Сберегательный дом")
+
+
+
+mixin checkbox(txt)
+	label.checkbox
+		input(type='checkbox', name='privacy', checked)
+		span.checkbox__wrap
+		span.checkbox__text !{txt}
+
+
+
+
+
+

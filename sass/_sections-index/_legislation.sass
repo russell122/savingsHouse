@@ -1,0 +1,128 @@
+.legislation
+	.legislation-title
+		display: inline-block
+		text-align: center
+		line-height: 1.3
+		@include max-screen($md)
+			br
+				display: none
+		span
+			font-size: 26px
+			line-height: 36px
+			color: $white
+			// display: block
+			background-color: #2b2e3a
+			border-radius: 3px
+			margin-bottom: 1px
+			box-shadow: -0.4em 0 0 #2b2e3a, 0.4em 0 0 #2b2e3a
+			@include max-screen($lg)
+				font-size: 22px
+			@include max-screen($md)
+				font-size: 18px
+				line-height: inherit
+			@include max-screen($sm)
+				font-size: 16px
+
+	&-tit__wrap
+		display: inline-flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		width: 100%
+		margin-bottom: 45px
+		@include max-screen($lg)
+			margin-bottom: 30px
+		@include max-screen($md)
+			margin-bottom: 20px
+			text-align: center
+	&__wrap
+		display: flex
+		@include max-screen($lg)
+			flex-direction: column
+	&__left
+		flex: 0 1 49%
+		margin-right: 2%
+		@include max-screen($lg)
+			flex: 0 1 100%
+			margin-right: 0
+		.work
+			display: flex
+			border-radius: 3px
+			border: solid 2px #efefef
+			padding: 48px 27px 43px 58px
+			margin-bottom: 23px
+			@include max-screen($xl)
+				flex-direction: column
+				padding: 30px
+			@include max-screen($sm)
+				padding: 20px
+			&:last-child
+				margin-bottom: 0
+			.work__img
+				min-width: 181px
+				flex-shrink: 0
+				margin-right: 40px
+				@include max-screen($xl)
+					margin-right: 0
+					margin-bottom: 30px
+				@include max-screen($md)
+					display: flex
+					justify-content: center
+					align-items: center
+			.work__body
+				p
+					font-size: 14px
+					line-height: 22px
+					margin-bottom: 42px
+					@include max-screen($xl)
+						margin-bottom: 20px
+				h4
+					@include max-screen($md)
+						text-align: center
+			.work__body-bl
+				display: flex
+				align-items: center
+				a
+					display: inline-flex
+					align-items: flex-start
+					justify-content: flex-start
+					max-width: 100%
+					flex-shrink: 0
+					.img
+						min-width: 32px
+						margin-right: 15px
+				span
+					font-size: 14px
+					color: $red
+	&__right
+		flex: 0 1 49%
+		@include max-screen($lg)
+			flex: 0 1 100%
+	&__right-block
+		background-color: #f2f2f2
+		display: flex
+		justify-content: center
+		align-items: center
+		flex-direction: column
+		height: 100%
+		@include max-screen($xl)
+			justify-content: flex-start
+			padding: 30px 0
+		@include max-screen($sm)
+			padding: 20px 0
+			text-align: center
+			// background: transparent
+		h4
+			margin-bottom: 30px
+			@include max-screen($sm)
+				margin-bottom: 20px
+	&__right-link
+		display: block
+	.open-magn
+		@include max-screen($sm)
+			display: flex
+			justify-content: center
+			align-items: center
+		img
+			@include max-screen($sm)
+				width: 80%

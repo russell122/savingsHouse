@@ -1,0 +1,99 @@
+// payment
+section.section.payment.page-hero
+
+	.container
+
+		h1.title-1.page-title.text-center Оплатить взнос
+
+
+		.payment__body.js-tab-wrapper
+
+			.payment__center
+
+				.payment__tabs.tabs
+					button.button.tab.js-tab.is-active(type="button") Вступительный взнос 
+					button.button.tab.js-tab(type="button") Обязательный паевой взнос 
+					button.button.tab.js-tab(type="button") Членский взнос
+
+
+				.payment__types
+					- for(let i = 0; i < 3; i++)
+						.js-tab-item
+
+							.payment__val
+								.fz-30 Вступительный паевой взнос
+								.title.title-1 500 Р
+
+							.payment__form
+								.payment__form-1
+									h2.title-2.text-center Оплатить онлайн
+									.payment__form-inputs
+										form(action="#")
+											input.input(type="text", name="surname", placeholder="Фамилия", required)
+											input.input(type="text", name="name", placeholder="Имя", required)
+											input.input(type="text", name="sec_name", placeholder="Отчество", required)
+											button.button.button--accent-bg.submit.DEMO-SUBMIT(type="submit") Перейти к оплате
+											+checkbox('Даю свое согласие на обработку персональных&nbsp;данных')
+								
+								.payment__form-2
+									.payment__form-inputs
+										div.flex-center(style="height: 300px; background: #f2f2f2; font-size: 32px; text-align: center; padding: 30px;")
+											span Тут встраиваемая форма Юкассы
+
+							.payment__requisites
+								h2.title-2.text-center По реквизитам
+
+								.table
+									table
+										tbody
+											tr
+												th ИНН организации:
+												td 7842181135
+											tr
+												th КПП организации:
+												td 784201001
+											tr
+												th ОГРН организации:
+												td 1207800060808
+											tr
+												th ОКПО организации:
+												td 44231841
+											tr
+												th ОКАТО организации:
+												td 40298000000
+											tr
+												th ОКТМО организации:
+												td 40911000000
+											tr
+												th Р/с организации:
+												td 40701810338000004776
+											tr
+												th Наименование банка, в котором обслуживается организация:
+												td ПАО «СБЕРБАНК»
+											tr
+												th БИК банка:
+												td 044525225
+											tr
+												th К/с банка:
+												td 30101810400000000225
+											tr
+												th Наименование предприятия:
+												td в  ГУ БАНКА РОССИИ ПО ЦФО 
+											tr
+												th E-mail организации:
+												td
+													a(href="mailto:info@sber-dom24.ru") info@sber-dom24.ru
+								
+								// /.table
+
+							// /.payment__requisites
+						// /.js-tab-item
+				// /.payment__types
+
+			// /.payment__center
+
+		// /.payment__body
+
+	// /.container
+
+// /.payment

@@ -1,0 +1,49 @@
+// advantages
+section.section.advantages
+
+	.container
+
+		.advantages__title
+			h2.title-2.text-center-md Деньги застрахованы залогом недвижимости
+
+		.advantages__row.f-row.d-block-xl
+
+			.advantages__img
+				img.img.img--cover(src="img/advantages-img-1.jpg", alt="alt")
+				.cb-logo
+					span Реестр ЦБ
+
+
+			.f-col.advantages__col
+
+				.advantages-items.f-row
+
+					-
+						var links = [
+							{"title": "Работаем по всей<br> России"},
+							{"title": "Получение процентов<br> ежемесячно"},
+							{"title": "Гражданская ответственность КПК за нарушение договоров"},
+							{"title": "Под контролем ЦБ РФ"},
+							{"title": "Перечисление процентов удобным Вам способом"},
+							{"title": "Досрочное расторжение без потери процентов"},
+						]
+					each item in links
+						.f-col.advantages-items__col
+							.advantages-item !{item.title}
+
+
+
+				// /.advantages-items.flex
+			// /.advantages__col
+
+
+
+
+
+		// /.advantages__row.flex
+
+
+
+	// /.container
+
+// /.advantages

@@ -1,0 +1,24 @@
+extends layout/main
+
+block variables
+	- let title = 'Контакты'
+	- let page = 'contacts'
+
+
+
+block content
+	include sections-contacts/hero
+	include sections-contacts/offices
+
+
+
+
+
+//- block libs-css
+	// библиотека.css
+	link(rel="stylesheet" href="libs/library/library.css")
+
+block libs-js
+	// Google maps
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB998msEJSpJZzVtG03uEhxjAq8Q_32rhg&amp;v=3.31&amp;language=ru&amp;libraries=places,geometry&amp;")
+	script(src="js/map.js")

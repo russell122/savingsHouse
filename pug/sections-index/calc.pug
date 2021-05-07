@@ -1,0 +1,106 @@
+mixin block
+
+	.container.container--sm
+		h2.title-2.text-center Рассчитать доходность
+
+		.calc__row.f-row.d-block-xl
+
+			.f-col.col-1-2
+				.calc-set
+					.calc-set__item
+
+						.calc-set__input.range-styled
+							.calc-set__title Хочу вложить
+							.calc-set__result 14 500 000 Р
+							input.js-range-slider#calc-sum(type='text' name='range_1' value='' data-min='5000' data-max='20000000' data-from='14500000' data-step="5000", data-postfix="Р")
+						// /.calc-set__input
+
+						.calc-set__hints.flex
+							span.subtext от 5 000 Р
+							span.subtext до 20 000 000 Р
+					
+					// /.calc-set__item
+
+					.calc-set__item
+
+						.calc-set__input.range-styled
+							.calc-set__title На срок
+							.calc-set__result 20 мес
+							input.js-range-slider#calc-time(type='text' name='range_2' value='' data-min='3' data-max='36' data-from='20' data-step="1", data-postfix="мес")
+						// /.calc-set__input
+
+						.calc-set__hints.flex
+							span.subtext от 3 месяцев
+							span.subtext до 3х лет
+
+					// /.calc-set__item
+
+					.calc-set__item
+
+						.calc-set__input.range-styled
+							.calc-set__title Ежемесячно пополняя на
+							.calc-set__result 460 000 Р
+							input.js-range-slider#calc-payment(type='text' name='range_2' value='' data-min='10000' data-max='600000' data-from='460000' data-step="5000", data-postfix="Р")
+						// /.calc-set__input
+
+						.calc-set__hints.flex
+							span.subtext от 10 000 Р
+							span.subtext до 600 000 Р
+
+					// /.calc-set__item
+				// /.calc-set
+
+			.f-col.col-1-2
+				.calc-result
+
+					.calc-result__table
+					
+						.calc-result__tr.calc-result__main.flex
+							.calc-result__label Доход составит:
+							.calc-result__val 25 645 925 Р
+
+						.calc-result__tr.flex
+							.calc-result__label Общий доход: 
+							.calc-result__val 2 405 925 Р
+
+						.calc-result__tr.flex
+							.calc-result__label Доход в месяц: 
+							.calc-result__val 120 296 Р 
+
+						.calc-result__tr.flex
+							.calc-result__label Ставка:
+							.calc-result__val 8.5%
+
+						.calc-result__tr.flex
+							.calc-result__label Срок:
+							.calc-result__val 3 года
+
+					// /.calc-result__table
+
+					.calc-result__btn
+						button.button.button--accent.button--accent-bg(type="button") Получить доход
+
+					.calc-result__alert.subtext
+						p Пример расчета процентов носит информационный характер и не является публичной офертой
+
+				// /.calc-result
+
+		// /.calc__row.f-row
+
+	// /.container
+
+
+
+// calc
+section.section.calc
+
+	if page == 'saving'
+		.calc__bg
+			+block
+		// /.calc__bg
+	else
+		+block
+
+	
+
+// /.calc

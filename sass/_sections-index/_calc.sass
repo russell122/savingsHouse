@@ -1,0 +1,179 @@
+.calc
+
+
+	&__bg
+		max-width: 1410px
+		margin: 0 auto
+		padding: 60px 0
+		background: $bg-dark
+		border-radius: 3px
+		color: $white
+		@include max-screen($md)
+			padding: 45px 0 75px
+
+	&__row
+		color: $text-color
+
+	&-set, &-result
+		background: $bg
+		border-radius: 3px
+		min-height: 100%
+
+
+	&-set
+		padding: 51px 65px
+		@include max-screen($md)
+			width: calc(100% + 40px)
+			margin-left: -20px
+			padding: 40px 20px 20px
+
+		&__item
+			margin-bottom: 28px
+
+		&__input
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding: 20px 25px
+			background: $white
+			position: relative
+			.irs
+				position: absolute
+				bottom: 0
+				left: 0
+				width: 100%
+			@include max-screen($md)
+				padding: 17px 15px 18px
+
+		&__title
+			@include max-screen($md)
+				font-size: 14px
+		
+		&__result
+			font-weight: 600
+
+		&__hints
+			align-items: center
+			justify-content: space-between
+			margin-top: 12px
+			@include max-screen($md)
+				margin-top: 10px
+
+
+	&-result
+		padding: 60px 100px
+		border: 2px solid $text-color
+		@include max-screen($xl)
+			margin-top: 30px
+		@include max-screen($md)
+			padding: 30px 25px
+
+		&__table
+			@include max-screen($md)
+				display: flex
+				flex-wrap: wrap
+
+		&__main
+			.calc-result__label
+				font-weight: 700
+			.calc-result__val
+				font-size: 30px
+				line-height: 1
+				font-weight: 600
+				letter-spacing: $ls
+			@include max-screen($md)
+				width: 100% !important
+
+		&__tr
+			align-items: center
+			margin-bottom: 16px
+			@include max-screen($md)
+				display: block
+				width: 50%
+				margin-bottom: 20px
+
+		&__label
+			width: 50%
+			padding-right: 15px
+			@include max-screen($md)
+				width: 100%
+
+		&__val
+			flex: 1 0 0
+			max-width: 100%
+			font-weight: 600
+
+		&__btn
+			margin-top: 25px
+			.button
+				width: 100%
+			@include max-screen($md)
+				margin-top: 0
+
+		&__alert
+			margin-top: 20px
+			@include max-screen($md)
+				text-align: center
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+.range-styled
+	.irs
+		height: 3px
+		*
+			font-family: $default-font
+		.irs-line, .irs-bar
+			top: 0
+		.irs-min, .irs-max, .irs-single
+			padding: 0
+			background: none
+			display: none
+		.irs-line
+			height: 3px
+			background: #bdbdbd
+		.irs-bar
+			height: 100%
+			position: absolute
+			background: $accent
+		.irs-handle
+			top: -8px
+			height: 16px
+			width: 16px
+			border-radius: 50%
+			background: none
+			cursor: pointer
+			background: $white
+			border: 4px solid $accent
+			border-radius: 50%
+			box-shadow: 0 0 0 2px #efefef
+			i
+				display: none !important
+
+
+
+
+
+
+// @include max-screen($xl)
+
+// @include min-screen(1200px)
+
+
+
+
+

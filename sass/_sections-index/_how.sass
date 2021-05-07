@@ -1,0 +1,148 @@
+.how
+	@include max-screen($xl)
+		overflow: hidden
+
+
+	&__row
+		@include max-screen($xl)
+			> .f-col:first-child
+				.how__item
+					height: auto
+					margin-bottom: 25px
+
+
+	&__img
+		font-size: 10px
+		width: 37.8em
+		height: 51.5em
+		position: relative
+		top: 3em
+		left: 6em
+		z-index: 1
+		margin: auto
+		&::before
+			content: ''
+			display: block
+			width: 3px
+			height: 224px
+			position: absolute
+			z-index: -1
+			left: 18em
+			bottom: -2em
+			background: $accent
+			transform: skewX(-31deg)
+		&::after
+			content: ''
+			font-size: 1em
+			display: block
+			width: 45.3em
+			height: 45.3em
+			border-radius: 50%
+			position: absolute
+			z-index: -2
+			left: 50%
+			top: 50%
+			transform: translate(-66%, -44%)
+			background: $bg
+		@include max-screen($xl)
+			top: 0
+		@include max-screen($md)
+			font-size: 1.5vw
+			&::before
+				height: 22em
+				width: 2px
+				bottom: -15px
+
+	&__slider
+		.swiper-wrapper
+			@include min-screen(1200px)
+				margin-bottom: -30px
+		.swiper-slide
+			@include max-screen($md)
+				width: 100%
+				max-width: 295px
+
+
+	&__item
+		height: 100%
+		padding: 40px 41px 36px 48px 
+		background-color: #ffffff
+		border: 2px solid #efefef
+		border-radius: 3px
+		position: relative
+		&::before
+			content: ''
+			display: block
+			width: 1em
+			height: 1em
+			position: absolute
+			z-index: 0
+			right: 42px
+			top: 42px
+			background-repeat: no-repeat
+			background-position: 100% 50%
+			background-size: contain
+		&-1
+			&::before
+				font-size: 48px
+				background-image: url('../img/ic-how-1.svg')
+		&-2
+			&::before
+				font-size: 40px
+				background-image: url('../img/ic-how-2.svg')
+		&-3
+			&::before
+				font-size: 38px
+				background-image: url('../img/ic-how-3.svg')
+		&-4
+			&::before
+				font-size: 46px
+				background-image: url('../img/ic-how-4.svg')
+		&-num
+			margin-bottom: 20px
+			color: $accent
+		&-title
+			font-weight: 600
+			margin-bottom: 10px
+
+		p
+			margin-bottom: 0
+		&-btn
+			margin-top: 25px
+			.button
+				width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @include max-screen($xl)
+
+// @include min-screen(1200px)
+
+
+
+
+

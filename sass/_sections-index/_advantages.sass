@@ -1,0 +1,116 @@
+.advantages
+	padding: 80px 0
+	background: $bg
+	overflow: hidden
+	@include max-screen($md)
+		padding: 40px 0
+
+	&__title
+		max-width: 530px
+
+	&__row
+		@include min-screen(1200px)
+			flex-direction: row-reverse
+
+	&__col
+		width: 50%
+
+	&__img
+		margin-top: -100px
+		max-width: 50%
+		width: 585px
+		margin-left: auto
+		position: relative
+		&::before, &::after
+			content: ''
+			display: block
+			font-size: 10px
+			border-style: solid
+			border-color: transparent
+			position: absolute
+			z-index: 0
+		&::before
+			border-left-width: 2.7em
+			border-right-width: 2.7em
+			border-bottom-width: 4.4em 
+			border-bottom-color: $red 
+			left: -2.7em
+			top: 50%
+		&::after
+			border-left-width: 1.4em
+			border-right-width: 1.4em
+			border-top-width: 2.3em 
+			border-top-color: $red 
+			left: 10em
+			bottom: -1.1em
+
+		@include max-screen($xl)
+			position: relative
+			margin: 0 0 50px
+			max-width: 100%
+			width: auto
+		@include max-screen($lg)
+			&::before, &::after
+				font-size: 8px
+		@include max-screen($md)
+			margin-bottom: 40px
+			&::before, &::after
+				font-size: 6px
+
+
+	&-items
+		margin-bottom: -60px
+		@include max-screen($md)
+			margin-bottom: -35px
+		&__col
+			width: 50%
+			margin-bottom: 60px
+			@include max-screen($md)
+				margin-bottom: 35px
+
+	&-item
+		height: 100%
+		padding-bottom: 45px
+		border-bottom: 2px solid #111
+		@include max-screen($md)
+			padding-bottom: 22px
+
+
+
+
+
+
+.cb-logo
+	display: flex
+	align-items: center
+	font-size: 10px
+	padding: 4em 4.6em
+	position: absolute
+	left: -6.3em
+	top: 8.5em
+	background: $white
+	box-shadow: 0px 0px 35px 0px rgba(0,0,0,0.09)
+	border-radius: 3px
+	&::before
+		content: ''
+		display: block
+		width: 5.2em
+		height: 5.2em
+		margin-right: 1.6em
+		background: url('../img/logo-cb.jpg') no-repeat 50% 50% / contain
+	span
+		font-size: 1.7em
+	@include max-screen($lg)
+		font-size: 8px
+		left: -15px
+	@include max-screen($md)
+		font-size: 6px
+
+
+
+
+
+
+
+
+	

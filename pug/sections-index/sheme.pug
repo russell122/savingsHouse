@@ -1,0 +1,68 @@
+// sheme
+section.section.sheme
+
+	.container
+
+
+
+		.sheme__bg
+
+			h2.title-2.text-center Как это работает
+
+			.sheme-container
+
+
+				.sheme-blocks
+					.sheme-block.sheme-block-1.flex-center
+						.sheme-block__ic.flex-center
+							img.img.img--contain(src="img/sheme-ic-1.svg", alt="alt")
+						span Пайщики
+						
+					.sheme-block.sheme-block-2.flex-center
+						.logo
+							img.img(src="img/logo.svg", alt="alt")
+
+					.sheme-block.sheme-block-3.flex-center
+						.sheme-block__ic.flex-center
+							img.img.img--contain(src="img/sheme-ic-2.svg", alt="alt")
+						span Заёмщики
+
+					.show-md
+						- for(let i = 1; i < 5; i++)
+							span.sheme-blocks__num.title.title-2(class= "sheme-blocks__num-"+i) !{i}
+
+				// /.sheme-blocks
+
+
+				.sheme-row.sheme-row-1.f-row.d-block-md
+					.f-col.col-1-2
+						.sheme-item
+							span.sheme-item__num.title.title-2 1
+							span.sheme-item__txt Физические лица размещают свои сбережения<br> и становятся Пайщиками КПК «Сберегательный Дом»
+					.f-col.col-1-2
+						.sheme-item
+							span.sheme-item__num.title.title-2 2
+							span.sheme-item__txt Оформляет займы под залог недвижимости для всех<br> заинтересованных лиц, которые становятся его Пайщиками (Заемщиками)
+				// /.sheme-row.f-row
+				
+
+				.sheme-row.sheme-row-2.f-row.d-block-md
+					.f-col.col-1-2
+						.sheme-item
+							span.sheme-item__num.title.title-2 4
+							span.sheme-item__txt КПК «Сберегательный Дом» выплачивает Пайщикам полученные от Заемщиков денежные средства в качестве выплаты процентов по размещенным сбережениям
+					.f-col.col-1-2
+						.sheme-item
+							span.sheme-item__num.title.title-2 3
+							span.sheme-item__txt Заёмщики ежемесячно возвращают денежные средства КПК «Сберегательный Дом» вместе с процентами за их использование
+				// /.sheme-row.f-row
+
+			// /.sheme-container
+
+		// /.sheme__bg
+		
+
+
+	// /.container
+
+// /.sheme

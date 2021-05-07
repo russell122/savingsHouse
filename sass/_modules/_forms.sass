@@ -1,0 +1,193 @@
+/* ----- Forms ----- */
+
+*::placeholder
+	color: $text-color
+	opacity: 1
+	@include trs(.1s)
+
+body input:focus:required:invalid, body textarea:focus:required:invalid,
+body input:required:valid, body textarea:required:valid
+	color: $text-color
+
+
+.input
+	display: block
+	width: 100%
+	min-width: 1px
+	height: 58px
+	margin-bottom: 14px
+	padding: 20px 30px
+	background-color: $white
+	border: none
+	box-shadow: inset 0px 1px 0px 0px rgba(0,0,0,0.24)
+	border-radius: 3px
+	font-size: 17px
+	@include trs(.1s)
+	&:focus
+		outline: none
+		&::placeholder
+			opacity: 0
+	@include max-screen($md)
+		padding: 20px 24px
+
+
+.submit
+	width: 100%
+	height: 52px
+
+.textarea
+	height: 168px
+	resize: none
+
+
+.form
+	&-row
+		margin: 0 -10px
+		@include max-screen($md)
+			display: block
+			margin: 0
+	&-col
+		width: 50%
+		padding: 0 10px
+		@include max-screen($md)
+			width: 100%
+			padding: 0
+
+	&-footer
+		display: flex
+		justify-content: space-between
+		align-items: center
+		.button
+			width: auto
+			min-width: 198px
+		.checkbox
+			margin: 0
+			max-width: 242px
+		@include max-screen($md)
+			display: block
+			text-align: center
+			.button
+				width: 100%
+				margin-top: 24px
+			.checkbox
+				margin: 24px auto 0
+
+
+		
+.checkbox 
+	display: flex
+	cursor: pointer
+	margin-top: 25px
+	margin-bottom: 0
+
+	&__wrap
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		width: 18px
+		height: 18px
+		flex: 0 0 18px
+		margin-right: 16px
+		border-radius: 3px
+		background-color: $white
+		&::before
+			content: ''
+			display: block
+			width: 10px
+			height: 10px
+			background: $accent
+			transform: scale(0)
+			border-radius: 2px
+			transition: all .1s
+
+	&__text
+		display: inline-block
+		opacity: 0.6
+		font-size: 12px
+		line-height: 1.5
+		color: $sub
+		@include max-screen($sm)
+			line-height: 1.2
+		a
+			&:hover
+				text-decoration: underline
+			
+	input
+		display: none
+		&:checked
+			+ .checkbox__wrap
+				&::before
+					transform: scale(1)
+
+
+
+
+
+.modal
+	display: none
+	width: 100%
+	margin: 0 auto
+	padding: 0
+	border-radius: 3px
+
+	&__close
+		font-size: 10px
+		width: 2.5em
+		height: 2.5em
+		background: url('../img/close.svg') no-repeat 50% 50% / 1.8em auto
+		cursor: pointer
+		position: absolute
+		z-index: 1
+		top: 2.5em
+		right: 2.5em
+		@include max-screen($md)
+			font-size: 8px
+	
+
+.modal-form
+	background: $bg url('../img/bg-form.jpg') no-repeat 100% 100% / contain
+	box-shadow: 0 0 10px rgba($black, .1)
+	max-width: 752px
+	@include max-screen($md)
+		background-image: url('../img/bg-form-mob.jpg')
+		text-align: center
+		
+
+	&__content
+		padding: 70px 70px 80px
+		position: relative
+		overflow: hidden
+
+		@include max-screen($md)
+			padding: 40px 25px 150px
+			&::after
+				display: none
+
+	&__title
+		margin-bottom: 25px
+		text-align: center
+
+	.form
+		max-width: 316px
+		margin: 0 auto
+
+	.input
+		margin-bottom: 16px
+		@include max-screen($md)
+			text-align: center
+
+	.submit
+		@include max-screen($sm)
+			width: 100%
+
+	.checkbox
+		@include max-screen($md)
+			max-width: 250px
+			margin-left: auto
+			margin-right: auto
+
+
+
+
+
+		

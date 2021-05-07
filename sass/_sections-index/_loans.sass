@@ -1,0 +1,56 @@
+.loans
+	background-color: $bg
+	&__block
+		position: relative
+		// height: 427px
+		background-image: url('../img/loans-bg.png')
+		background-repeat: no-repeat
+		background-position: bottom right
+		@include max-screen($md)
+			background-position: center bottom
+	.container
+		@include max-screen($md)
+			padding: 0
+	.el-border
+		&::after
+			@include max-screen($md)
+				left: 50%
+				transform: translate(-50%, -50%)
+	&__body
+		width: 760px
+		padding: 96px 0 146px 63px
+		@include max-screen($md)
+			width: 100%
+			text-align: center
+			padding: 96px 15px 365px 15px
+		@include max-screen($md)
+			padding: 40px 15px 400px 15px
+		h2
+			letter-spacing: -1.1px
+			line-height: 36px
+			span
+				font-size: 26px
+				font-weight: 300
+				line-height: 36px
+				@include max-screen($sm)
+					font-size: 20px
+		p
+			font-size: 17px
+	&__info
+		border-radius: 3px
+		box-shadow: 0 0 62px 0 rgba(0, 0, 0, 0.13)
+		width: 350px
+		height: 140px
+		display: flex
+		justify-content: center
+		align-items: center
+		position: absolute
+		bottom: -70px
+		left: 63px
+		background-color: $white
+		@include max-screen($md)
+			left: 50%
+			transform: translate(-50%, 0%)
+		@include max-screen($sm)
+			bottom: -110px
+			width: 300px

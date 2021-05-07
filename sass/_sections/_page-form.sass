@@ -1,0 +1,120 @@
+.page-form
+	padding: 75px 0
+	position: relative
+	background: $bg
+	@include max-screen($xl)
+		padding-bottom: 150px
+	@include max-screen($lg)
+		margin-bottom: 150px
+		text-align: center
+		.el-border
+			&::after
+				left: 50%
+				margin-left: -21px
+		.input
+			text-align: center
+		.checkbox
+			max-width: 250px
+			margin-left: auto
+			margin-right: auto
+	@include max-screen($md)
+		padding-top: 45px
+		padding-bottom: 125px
+
+
+	&__row
+		padding-left: 140px
+		@include max-screen(1400px)
+			padding-left: 0
+		@include max-screen($lg)
+			display: block
+
+	&__col
+		width: 440px
+		margin-right: 95px
+		@include max-screen($xl)
+			width: 50%
+			margin-right: 0
+			padding-right: 30px
+		@include max-screen($lg)
+			width: 100%
+			padding: 0
+
+	&__inputs
+		width: 312px
+		margin-right: 135px
+
+		.input
+			margin-bottom: 24px
+
+		@include max-screen(1300px)
+			margin-right: 85px
+		@include max-screen($xl)
+			margin: 0 auto
+		@include max-screen($lg)
+			width: 100%
+			max-width: 350px
+			margin-top: 60px
+		@include max-screen($md)
+			margin-top: 30px
+
+
+
+
+	&__img
+		font-size: 10px
+		width: 19.5em
+		height: 19.5em
+		border-radius: 50%
+		position: relative
+		background: $white
+		.img
+			font-size: 1em
+			width: 16.5em
+			height: 22em
+			object-fit: contain
+			object-position: 50% 100%
+			position: absolute
+			bottom: -1px
+			left: 50%
+			transform: translateX(-46%)
+		@include max-screen($xl)
+			font-size: 9px
+			position: absolute
+			bottom: 0
+			left: 50%
+			transform: translate(-50%, 50%)
+		@include max-screen($md)
+			font-size: 6.411px
+
+
+
+.page-form2
+	margin-bottom: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @include max-screen($xl)
+
+// @include min-screen(1200px)
+
+
+
+
+
